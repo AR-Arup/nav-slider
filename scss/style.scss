@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'lato' sans-serif;
+}
+
+.logo-img {
+    width: 60px;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+nav {
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+
+    ul {
+        float: right;
+        margin-right: 70px;
+        z-index: 9999;
+        
+        li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 8px
+        }
+        a {
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 7px 13px;
+            border-radius: 5px;
+            transition: .4s all ease-in-out;
+        }
+
+        a.active,a:hover {
+            background: #1b9bff;
+            transition: .4s all ease-in-out;
+        }
+    }
+
+    .checkbtn {
+       font-size: 30px; 
+       color: #fff;
+       cursor: pointer;
+       float: right;
+       line-height: 80px;
+       margin-right: 80px;
+       display: none;
+       &:hover {
+           color: #e3e3f1;
+       }
+    }
+    #check {
+        display: none;
+    }
+}
+
+header {
+    .img-slider {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 952px) {
+    .logo-img {
+        width: 60px;
+        margin-bottom: 5px;
+    }
+    nav {
+        ul  {
+            li {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 858px) {
+   nav {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        margin-right: 45px;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        text-align: center;
+        top: 80px;
+        left: -100%; 
+        transition: all .4s ease-in-out;
+        li {
+            display: block; 
+           a {
+                font-size: 18px;
+                letter-spacing: 1px;
+            }
+            a.active,a:hover {
+                background: none;
+                color: #0082e6;
+            }
+        }
+        
+    }
+  
+   }
+   #check:checked ~ ul {
+    left: 0;
+}
+}
